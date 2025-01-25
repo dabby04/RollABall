@@ -11,18 +11,22 @@ public class InputManager : MonoBehaviour
        Vector2 inputVector = Vector2.zero; //initialising our input vector
         if(Input.GetKey(KeyCode.W))
         {
+            Debug.Log("User's Input: up");
             inputVector += Vector2.up;
         }
          if(Input.GetKey(KeyCode.A))
         {
+            Debug.Log("User's Input: left");
             inputVector+=Vector2.left;
         }
          if(Input.GetKey(KeyCode.S))
         {
+            Debug.Log("User's Input: down");
             inputVector+=Vector2.down;
         }
          if(Input.GetKey(KeyCode.D))
         {
+            Debug.Log("User's Input: right");
             inputVector+=Vector2.right;
         } 
 

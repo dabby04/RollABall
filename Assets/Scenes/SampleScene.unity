@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereRigidBody: {fileID: 814210748}
-  ballSpeed: 2
+  ballSpeed: 5
 --- !u!114 &814210750
 MonoBehaviour:
   m_ObjectHideFlags: 0
