@@ -313,13 +313,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.3781091, y: 0.024655983, z: 0.016483644, w: 0.9252859}
+  m_LocalPosition: {x: -0.25, y: 6.556, z: -5.237}
+  m_LocalScale: {x: 2.8527515, y: 2.0714142, z: 4.173071}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.339, y: 4.659, z: 3.94}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 814210749}
   - component: {fileID: 814210750}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereRigidBody: {fileID: 814210748}
   ballSpeed: 5
+  jumpForce: 5
 --- !u!114 &814210750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +872,21 @@ MonoBehaviour:
       - m_Target: {fileID: 814210749}
         m_TargetAssemblyTypeName: BallController, Assembly-CSharp
         m_MethodName: MoveBall
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 814210749}
+        m_TargetAssemblyTypeName: BallController, Assembly-CSharp
+        m_MethodName: BounceBall
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -942,8 +958,8 @@ GameObject:
   - component: {fileID: 1928797541}
   - component: {fileID: 1928797540}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
+  m_Name: Ground
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
